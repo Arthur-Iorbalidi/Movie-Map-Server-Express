@@ -12,12 +12,10 @@ const User = sequelize.define('user', {
 const Movie = sequelize.define('movie', {
   id: {type: DataTypes.INTEGER, unique: true, primaryKey: true, autoIncrement: true},
   tittle: {type: DataTypes.STRING, allowNull: false},
-  description: {type: DataTypes.STRING, allowNull: true},
+  description: {type: DataTypes.TEXT, allowNull: true},
   creationDate: {type: DataTypes.DATEONLY, allowNull: false},
   genre: {type: DataTypes.STRING, allowNull: false},
   logoUrl: {type: DataTypes.STRING, allowNull: true},
-  country: {type: DataTypes.STRING, allowNull: false},
-  slogan: {type: DataTypes.STRING, allowNull: true},
   budget: {type: DataTypes.INTEGER, allowNull: false},
 })
 

@@ -1,8 +1,9 @@
 const Router = require('express');
 const router = new Router();
+const movieController = require('../controllers/movieController')
 
-router.post('/')
-router.get('/')
-router.get('/:id')
+router.post('/', movieController.create)
+router.get('/', movieController.getAll)
+router.get('/:id', movieController.getById)
 
 module.exports = router
